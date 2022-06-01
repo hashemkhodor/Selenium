@@ -43,13 +43,11 @@ class Product(object):
                         else:
                             dp.append(None)
                             dt.append(delivpair[1]+"("+ delivpair[0] +")")
-                           # product.deliveryprice.append(None)
-                            #product.deliverytime.append(delivpair[1]+"("+ delivpair[0] +")")
+                           
                     else:
                         dp.append(None)
                         dt.append(delivpair)
-                        #self.deliveryprice.append(None)
-                        #self.deliverytime.append(delivpair)
+                     
                 if dp!=[]:
                     
                     self.deliveryprice.append(dp)
