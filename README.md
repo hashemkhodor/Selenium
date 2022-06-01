@@ -117,13 +117,13 @@ The following method takes as an input parameter one option(string) and var (int
 #### 10. scrapepage_updated(self,link,options,var)  :
 This method takes as input parameters the link of the page, list of options (variations of product) and the var (for the xpath). It calls the methods : get_product_reviews_and_rating(link), getproductname() , and getproductpriceanddelivery(). It creates an instance product then append it to the self.products. It supports up to 4 different variations of the product.
 
-#### 10. get_product_overview_and_features(self):
+#### 11. get_product_overview_and_features(self):
 The following method returns the overview , features , and details of the product (overview , bultext , detail1+detail2) (tuple).
 
-#### 11. extract_reviews(self,reviews):
+#### 12. extract_reviews(self,reviews):
 The following method takes as an input parameter reviews (webelement of type a) that contains the link for the reviews page. It returns the postive and critical reviews (g_reviews, c_reviews) where both elements are of type string. 
 
-#### 12. get_product_reviews_and_rating(self):
+#### 13. get_product_reviews_and_rating(self):
 The following method calls the extract_reviews method to get the positive and critical reviews, scrapes the rating of the product then returns (good,critical,rating). 
 
 ## Product:
