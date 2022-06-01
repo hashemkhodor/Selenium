@@ -131,6 +131,7 @@ The following method calls the extract_reviews method to get the positive and cr
 #### 0. __init__(self,name,link=None,keyword=None,price=[],deliveryoptions=None,deliveryprice=['Unavailable'],deliverytime=['Unavailable'],overview='',features='',criticalreviews='',goodreviews='',generalreviews='',rating='',details='')
 The construct takes as input arguments the different attributes of the product and then assigns them to self. When constructing products in the scrapeproduct(link) method in AmazonBot, we only assign the name, link, keyword, deliveryoptions, overview, features, goodreviews, criticalreviews, rating, and details.
 
+### Main Methods:
 #### 1. deliverybreakdown(self):
 The following method breaks down the deliveryoptions attribute into price, deliveryprice, and deliverytime. 
 
