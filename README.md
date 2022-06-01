@@ -7,7 +7,9 @@ Very simple objective : scrape products from Amazon.
 The following project is implemented with Python 3.8.12 and using the following libraries: 
 - Selenium 3.141.0
 - Openpyxl 3.0.5
-**_Note: You have to download the chrome.exe file to match your google chrome's one (version wise) _**
+
+
+**Note: You have to download the chrome.exe file to match your google chrome's one (version wise)**
 
 ## AmazonBot 
 AmazonBot is a class that inherits from Object. It has 3 main methods, and other supporting methods. It also has several data attributes.
@@ -115,7 +117,7 @@ The following method takes as an input parameter one option(string) and var (int
 The following method returns the overview , features , and details of the product (overview , bultext , detail1+detail2) (tuple).
 
 #### 11. extract_reviews(self,reviews):
-The following method takes as an input parameter reviews (webelement of type a) that contains the link for the reviews page. If applicable, it returns the postive and critical reviews (g_reviews, c_reviews) where both elements are of type string. Otherwise, it returns the top reviews.
+The following method takes as an input parameter reviews (webelement of type a) that contains the link for the reviews page. It returns the postive and critical reviews (g_reviews, c_reviews) where both elements are of type string. 
 
 #### 12. get_product_reviews_and_rating(self):
 The following method calls the extract_reviews method to get the positive and critical reviews, scrapes the rating of the product then returns (good,critical,rating). 
