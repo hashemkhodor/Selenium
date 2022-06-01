@@ -39,6 +39,7 @@ The supporting methods are:
 - getproductpriceanddelivery(self)
 - getoptions(self)
 - get_path_option(self,option,var)
+- scrapepage_updated(self,link,options,var)
 - get_product_overview_and_features(self)
 - extract_reviews(self,reviews)
 - get_product_reviews_and_rating(self,link)
@@ -81,7 +82,7 @@ The following constructor takes as an input parameter the path(directory) of the
 #### 1. scrapeproduct(self,product,pages=1) :
 The following method takes as an input parameters product(string) and pages (int) and scrapes all the products from Amazon from the number of pages specified. It calls first the __getproductlinks(self,pages) method then calls the scrapepage(self,link) method.
 #### 2. scrapepage(self,link) :
-The following method takes as an input parameter link of the page to scrape it. It calls the methods : getoptions() , get_product_reviews_and_rating(link), getproductname() , and getproductpriceanddelivery(). It creates an instance product then append it to the self.products.
+The following method takes as an input parameter link of the page to scrape it. It calls first the supporting method:  getoptions(). Then identifies the options that can be selected. After that it calls the supporting method scrapepage_updated(self,link,options,var).
 
 #### 3.exportxlsx(self,path='',name='test1.xlsx'):
 The following method takes as an input parameters path and name of the xlsx sheet, then exports the scraped data into excel sheet in the specificied path. By default it exports the data in the same directory of the .py files. 
@@ -112,6 +113,9 @@ The following method the list of different options(types) of the product if pres
 
 #### 9. get_path_option(self,option,var):
 The following method takes as an input parameter one option(string) and var (int) which represents the variation and returns the corresponding xpath of the option.
+
+#### 10. scrapepage_updated(self,link,options,var)  :
+This method takes as input parameters the link of the page, list of options (variations of product) and the var (for the xpath). It calls the methods : get_product_reviews_and_rating(link), getproductname() , and getproductpriceanddelivery(). It creates an instance product then append it to the self.products. It supports up to 4 different variations of the product.
 
 #### 10. get_product_overview_and_features(self):
 The following method returns the overview , features , and details of the product (overview , bultext , detail1+detail2) (tuple).
