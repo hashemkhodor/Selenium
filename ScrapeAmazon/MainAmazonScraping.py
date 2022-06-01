@@ -8,6 +8,6 @@ Created on Sat May 21 17:29:54 2022
 from AmazonBot import AmazonBot
 
 Bot1= AmazonBot('C:\SeleniumWebdrivers\chromedriver_win32 (6)\chromedriver.exe')
-Bot1.scrapeproduct("boots")
+Bot1.scrapeproduct("sunglasses")
 Bot1.exportxlsx()
 

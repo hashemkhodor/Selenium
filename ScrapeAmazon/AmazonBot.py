@@ -43,10 +43,10 @@ class AmazonBot(object):
             links=[]
             for i in range(pages):
                 time.sleep(2)
-                Links= self.driver.find_elements_by_css_selector('a[class="a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal"]')
+                Links= self.find_elements_by_css_selector('a[class="a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal"]')
                 for link in Links:
                     links.append(link.get_attribute("href"))
-                nextpage= self.driver.find_elements_by_css_selector('div[role="navigation"] a[aria-label*="next page"]')
+                nextpage= self.find_elements_by_css_selector('div[role="navigation"] a[aria-label*="next page"]')
                 # assert nextpage , "Maximum number of pages reached" +str(i+1)
                 if nextpage:
                     self.driver.get(nextpage[0].get_attribute("href"))
